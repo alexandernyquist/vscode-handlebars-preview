@@ -3,14 +3,14 @@
   "displayName": "Handlebars Preview",
   "description": "Live preview for Handlebar templates",
   "version": "1.0.0",
-  "publisher": "chaliy",
+  "publisher": "alexandernyquist",
   "engines": {
     "vscode": "^1.5.0"
   },
   "icon": "icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chaliy/vscode-handlebars-preview"
+    "url": "https://github.com/alexandernyquist/vscode-handlebars-preview"
   },
   "galleryBanner": {
     "color": "#0F6378",
@@ -28,19 +28,23 @@
   ],
   "main": "./out/src/extension",
   "contributes": {
-    "commands": [{
-      "command": "handlebarsPreview.preview",
-      "title": "Handlebars: Open Preview"
-    }],
-    "keybindings": [{
-      "command": "handlebarsPreview.preview",
-      "key": "ctrl+p h",
-      "when": "!terminalFocus"
-    }]
+    "commands": [
+      {
+        "command": "handlebarsPreview.preview",
+        "title": "Handlebars: Open Preview"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "handlebarsPreview.preview",
+        "key": "ctrl+p h",
+        "when": "!terminalFocus"
+      }
+    ]
   },
   "scripts": {
-    "vscode:prepublish": "tsc -p ./",
-    "compile": "copyfiles test/examples/*.* out/ && tsc -p ./",
+    "vscode:prepublish": "tsc --allowSyntheticDefaultImports -p ./",
+    "compile": "copyfiles test/examples/*.* out/ && tsc --allowSyntheticDefaultImports -p ./",
     "postinstall": "node ./node_modules/vscode/bin/install",
     "test": "npm run compile && node ./node_modules/vscode/bin/test"
   },

@@ -2,6 +2,10 @@
 
 Live preview for your Handlebars templates. Extension compiles Handlebars template on the fly, apply preview data and render resulting HTML in separate window.
 
+## Fork
+
+The original repository was forked since it seemed dead and the plugin was broken due to vscode.previewHtml being deprecated.
+
 ## Features
 
 - Live prview for Handlebars templates. Preview updates as you type.
@@ -18,6 +22,7 @@ Live preview for your Handlebars templates. Extension compiles Handlebars templa
 
 ## Credits
 
+- [Original repository](https://github.com/chaliy/vscode-handlebars-preview)
 - [Handlebars.js: Minimal Templating on Steroids](http://handlebarsjs.com/)
 - [Handlebars for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=andrejunges.Handlebars)
 - [A HTML previewer for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=tht13.html-preview-vscode)
